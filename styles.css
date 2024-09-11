@@ -1,0 +1,776 @@
+/* Cambiar color de fondo */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #1a1a2e 50%, #ffffff 50%);
+    color: #fff;
+}
+/* Estilos para el contenido */
+.container {
+    max-width: 1200px; /* Ajusta el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+/* Aplicar estilos al contenido dentro de la clase .container */
+.container > * {
+    padding: 20px; /* Ajusta el espacio interno */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center; /* Aligns the image and text vertically */
+}
+
+.logo img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px; /* Adds space between the image and text */
+}
+
+.logo span {
+    font-family: 'Poppins', sans-serif; /* Use the same font as your website */
+    font-weight: 600; 
+    font-size: 24px; /* Adjust size as needed */
+    color: #fff;
+}
+
+
+/* Ajustes del header y navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px ;
+    background-color: #353535; 
+    z-index: 1; /* Línea blanca en el fondo */
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #23d6da;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para los enlaces del nav */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+    padding-bottom: 8px;
+}
+
+/* Ajustar el pseudo-elemento ::after para la línea verde agua */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: #23d6da; /* Color verde agua */
+    left: 0;
+    bottom: -41px; /* Ajustar la línea verde más cerca del texto */
+    transition: width 0.1s ease, background-color 0.1s ease;
+    z-index: 2; /* Asegurar que la línea verde esté por delante */
+}
+
+/* Hover effect */
+nav ul li a:hover::after {
+    width: 100%;
+    background-color: #23d6da; /* Cambiar color al hacer hover */
+}
+
+nav ul li a:hover {
+    color: #23d6da; /* Cambiar color del texto al hacer hover */
+}
+
+/* Cuando está activa */
+nav ul li a.active {
+    color: #23d6da; /* Cambia el color del texto cuando está activo */
+}
+
+nav ul li a.active::after {
+    width: 100%;
+    bottom: -41px; /* Ajustar la línea verde más cerca del texto */
+    background-color: #23d6da; /* Cambiar el color de la línea cuando está activo */
+    z-index: 2; /* Asegurar que esté por delante */
+}
+
+
+
+/*****/
+/* Nuevo estilo para el número de teléfono */
+.phone {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #23d6da; /* Color turquesa para el ícono y texto */
+}
+
+.phone i {
+    margin-right: 8px;
+}
+
+
+/**/
+/* Ajustes en la sección de héroe para mejorar la disposición */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.hero-content p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #bbb;
+    max-width: 600px;
+}
+
+.hero-btns {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero-btns input[type="text"] {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    width: 200px;
+}
+
+.hero-btns select {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.hero-btns .btn {
+    background-color: #23d6da;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btns .btn:hover {
+    background-color: #1bb2b3;
+}
+
+/* Estilo de la imagen */
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image img {
+    max-width: 600px;
+    margin-left: 10px;
+}
+
+
+
+/***********************/
+/* Customer Services Section */
+.customer-services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.customer-services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.customer-services .subheading {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Add this for the glow effect */
+}
+
+/* Within your styles.css file */
+.service img {
+    width: 250px; /* Adjust width as desired */
+    height: auto;  /* Adjust height automatically */
+    margin-bottom: 20px; 
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.service p {
+    font-size: 16px;
+    color: #dddbfa;
+    margin-bottom: 20px;
+}
+
+.service .read-more {
+    color: #36d1dc;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.service .read-more i {
+    margin-left: 5px;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow effect on hover */
+.service:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    z-index: -1; /* Make sure it's behind the content */
+    border-radius: 12px; /* Match the border-radius of the service */
+    transition: transform 0.1s ease; /* Smooth transition */
+}
+
+.service:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Position the line below the service */
+  left: 0;
+  width: 100%;
+  height: 3px; /* Adjust the height of the line */
+  background-color: #36d1dc; /* Match the color of the read more link */
+  opacity: 0.7; /* Make it semi-transparent */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service:hover::after {
+  transform: scaleX(1);
+}
+
+/**********/
+/* Pricing Section */
+.pricing {
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #1a1a2e 50%, #ffffff 50%);
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Plan Styles */
+.plan {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.plan img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.plan h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.plan .price {
+    font-size: 32px;
+    margin: 20px 0;
+    color: #000000;
+}
+
+.plan .price span {
+    font-size: 16px;
+    color: #000000;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    color: #000000;
+}
+
+.plan ul li {
+    margin-bottom: 10px;
+}
+
+.plan ul li i {
+    color: #36d1dc;
+    margin-right: 10px;
+}
+
+.plan .btn {
+    background-color: #dddbfa;
+    color: #1f10f1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Hover Effects */
+.plan:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 25px 24px rgba(26, 9, 180, 0.3);
+    background-color: #1a73e8;
+    color: #ffffff;
+}
+
+.plan:hover h3,
+.plan:hover .price,
+.plan:hover .price span,
+.plan:hover ul,
+.plan:hover ul li,
+.plan:hover .btn {
+    color: #ffffff;
+}
+
+.plan:hover .btn {
+    background-color: #175bc0;
+}
+
+
+
+/*deploy */
+.deployment {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.deployment img {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.deployment-content{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse; /*Se cambio a row-reverse para que la imagen esté a la derecha */
+    align-items: center; 
+    gap: 50px; /*Espacio entre la imagen y el texto */
+}
+
+.text-container {
+    text-align: left;
+    color: #000000;  
+    flex: 1; /*Ajusta el tamaño del texto al contenido*/
+}
+
+.image-container {
+    text-align: right; 
+    flex: 1; /*Ajusta el tamaño de la imagen al contenido*/
+}
+
+
+.deployment-contents{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /*Se cambio a row-reverse para que la imagen esté a la izquierda */
+    align-items: center; 
+    gap: 50px; /*Espacio entre la imagen y el texto */
+}
+
+
+.text-containers {
+    text-align: left;
+    color: #000000; 
+    flex: 1; /*Ajusta el tamaño del texto al contenido*/
+}
+
+.image-containers {
+    text-align: left; 
+    flex: 1; /*Ajusta el tamaño de la imagen al contenido*/
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+
+.get-started {
+    background-color: transparent;
+    color: #0f014b; /* Color blanco para el texto */
+    padding: 12px 24px; /* Ajuste de espacio interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Fuente en negrita */
+    cursor: pointer; /* Cambio de cursor al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    display: inline-flex; /* Necesario para alinear la flecha */
+    align-items: center; /* Centra la flecha verticalmente */
+}
+
+.get-started:hover {
+    background-color: #c7e0c9; /* Color azul más oscuro al pasar el ratón */
+}
+
+.get-started i { /* Estilo para la flecha */
+    margin-left: 5px; 
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+
+
+/**/
+.reviews {
+    padding: 50px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.reviews img {
+    width: 900px;
+    margin-bottom: 50px;
+}
+
+.reviews-content {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    color: #000000;
+}
+
+h2 {
+    font-size: 2.5rem; /* Larger heading */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    line-height: 1.6; /* Better readability */
+    color: #555; /* Slightly lighter text color */
+}
+
+
+/**/
+
+.powering-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0; /* Espaciado para centrar la sección */
+    background-color: #ffffff;
+}
+
+.powering {
+    background-color: #1c2541;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1; /* Para evitar cualquier superposición no deseada */
+}
+
+/* Tagline styling */
+.powering .tagline p {
+    background-color: #0d7377;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Heading styling */
+.powering-over h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+/* Description paragraph styling */
+.powering-over .description {
+    font-size: 16px;
+    margin: 30px 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* CTA button styling */
+.powering .cta-button {
+    background-color: #14ffec;
+    color: #1c2541;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: block; /* Ocupa todo el ancho del contenedor */
+    margin: 20px auto; /* Margen superior e inferior, centra horizontalmente */
+    width: 150px; /* Ajusta el ancho del botón */
+    height: 15px; /* Ajusta la altura del botón */
+}
+
+.powering .cta-button:hover {
+    background-color: #00e6d2;
+}
+
+.powering .cta-button {
+    /* ... (estilo del botón) ... */
+    animation: float 2s infinite; /* Animación "float" con duración de 2 segundos, repite infinitamente */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-5px); /* Desplaza ligeramente hacia arriba */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a la posición inicial */
+    }
+}
+
+
+
+footer {
+    background-color: #0d112b;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    max-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-logo span {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00b0ff;
+}
+
+.footer-text {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.footer-newsletter {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.newsletter-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00b0ff;
+}
+
+.foot-btn {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.foot-btn input {
+    border: none;
+    background-color: #272d55;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.fo-btn {
+    padding: 10px 20px;
+    background-color: #00b0ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.fo-btn:hover {
+    background-color: #00a0e9;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.internal-pages, .partners {
+    color: #fff;
+}
+
+.internal-pages p, .partners p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00b0ff;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li a {
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+footer ul li a:hover {
+    color: #00b0ff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 12px;
+    border-top: 1px solid #777;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
