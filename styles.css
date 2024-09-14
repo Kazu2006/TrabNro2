@@ -8,6 +8,9 @@ body {
     background: linear-gradient(to bottom, #1a1a2e 50%, #ffffff 50%);
     color: #fff;
 }
+
+
+
 /* Estilos para el contenido */
 .container {
     max-width: 1200px; /* Ajusta el ancho máximo del contenido */
@@ -26,9 +29,8 @@ body {
 }
 
 .logo img {
-    width: 50px; /* Adjust the size as needed */
-    height: auto;
-    margin-right: 10px; /* Adds space between the image and text */
+    max-width: 40px;
+    margin-right: 10px;
 }
 
 .logo span {
@@ -37,6 +39,9 @@ body {
     font-size: 24px; /* Adjust size as needed */
     color: #fff;
 }
+
+
+
 
 
 /* Ajustes del header y navbar */
@@ -120,6 +125,8 @@ nav ul li a.active::after {
 
 
 
+
+
 /*****/
 /* Nuevo estilo para el número de teléfono */
 .phone {
@@ -130,9 +137,24 @@ nav ul li a.active::after {
 }
 
 .phone i {
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
 
 /**/
 /* Ajustes en la sección de héroe para mejorar la disposición */
@@ -774,3 +796,226 @@ footer ul li a:hover {
     width: 100%;
     max-width: 1200px;
 }
+
+
+
+/* Estilos existentes... */
+
+/* Media queries para responsividad */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+        margin: 0 auto; /* Centrar el contenido horizontalmente */
+    }
+
+    .hero {
+        padding: 50px 20px;
+        margin: 20px 0; /* Añadir margen superior e inferior */
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+        margin-bottom: 15px; /* Espacio debajo del título */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #1a1a2e;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .nav-list li a {
+        color: #fff; /* Color inicial de las letras */
+        text-decoration: none !important; /* Asegura que no haya subrayado */
+        padding: 10px;
+        transition: color 0.3s ease; /* Añade una transición suave */
+    }
+
+    .nav-list li a:hover {
+        color: #00ffff; /* Color de las letras al pasar el mouse (hover) */
+        text-decoration: none !important; /* Asegúrate de que no haya subrayado en hover */
+    }
+
+    .phone {
+        display: none;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+        margin: 15px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+        margin-bottom: 12px;
+    }
+
+    .hero-image img {
+        display: none; /* Oculta la imagen en pantallas menores a 992px */
+    }
+
+    .services {
+        justify-content: center;
+    }
+
+    .service {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        padding: 0 10px;
+    }
+    .hero {
+        padding: 30px 10px;
+        margin: 10px 0;
+    }
+
+    .nav-list {
+        padding: 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .service {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-plans {
+        flex-direction: column;
+    }
+
+    .plan {
+        max-width: 100%;
+    }
+
+    .plan h3 {
+        font-size: 20px;
+    }
+
+    .plan .price {
+        font-size: 28px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+
+
+    .service img {
+        width: 200px; /* Reduce the image size for smaller screens */
+        margin-bottom: 15px;
+    }
+
+    .pricing img {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 5px;
+    }
+
+    .hero {
+        padding: 20px 5px;
+        margin: 5px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        margin-bottom: 8px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .service img {
+        width: 150px;
+    }
+
+    .deployment-content,
+    .deployment-contents {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container, .text-containers {
+        text-align: center;
+    }
+
+    .reviews img {
+        width: 100%;
+    }
+
+    .pricing-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
