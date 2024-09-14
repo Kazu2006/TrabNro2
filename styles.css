@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #1a1a2e 50%, #ffffff 50%);
+    background: linear-gradient(to bottom, #10102c 50%, #ffffff 50%);
     color: #fff;
 }
 
@@ -238,6 +238,23 @@ nav ul li a.active::after {
 
 /***********************/
 /* Customer Services Section */
+
+.label-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.label {
+    background-color: #12414b; /* Color de fondo para que coincida con la imagen */
+    color: #00ffe7; /* Color del texto turquesa */
+    padding: 8px 16px;
+    border-radius: 25px; /* Mayor curvatura para que coincida mejor */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* El resto de tu CSS permanece igual */
 .customer-services {
     padding: 50px 20px;
     text-align: center;
@@ -273,14 +290,13 @@ nav ul li a.active::after {
     width: 100%;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Add this for the glow effect */
+    position: relative;
 }
 
-/* Within your styles.css file */
 .service img {
-    width: 250px; /* Adjust width as desired */
-    height: auto;  /* Adjust height automatically */
-    margin-bottom: 20px; 
+    width: 250px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .service h3 {
@@ -312,7 +328,7 @@ nav ul li a.active::after {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Glow effect on hover */
+/* Efecto de resplandor en hover */
 .service:hover::before {
     content: '';
     position: absolute;
@@ -321,33 +337,52 @@ nav ul li a.active::after {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    z-index: -1; /* Make sure it's behind the content */
-    border-radius: 12px; /* Match the border-radius of the service */
-    transition: transform 0.1s ease; /* Smooth transition */
+    z-index: -1;
+    border-radius: 12px;
+    transition: transform 0.1s ease;
 }
 
 .service:hover::after {
-  content: '';
-  position: absolute;
-  bottom: -5px; /* Position the line below the service */
-  left: 0;
-  width: 100%;
-  height: 3px; /* Adjust the height of the line */
-  background-color: #36d1dc; /* Match the color of the read more link */
-  opacity: 0.7; /* Make it semi-transparent */
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #36d1dc;
+    opacity: 0.7;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .service:hover::after {
-  transform: scaleX(1);
+    transform: scaleX(1);
 }
 
-/**********/
+
+
+
+/***********************/
 /* Pricing Section */
+
+.label-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.label {
+    background-color: #12414b; /* Color de fondo para que coincida con la imagen */
+    color: #00ffe7; /* Color del texto turquesa */
+    padding: 8px 16px;
+    border-radius: 25px; /* Mayor curvatura para que coincida mejor */
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .pricing {
     padding: 50px 20px;
-    background: linear-gradient(to bottom, #1a1a2e 50%, #ffffff 50%);
+    background: linear-gradient(to bottom, #10102c 50%, #ffffff 50%);
     text-align: center;
 }
 
@@ -357,6 +392,16 @@ nav ul li a.active::after {
     color: #ffffff;
 }
 
+.pricing .subheading {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Plan Styles */
 .pricing-plans {
     display: flex;
     justify-content: center;
@@ -364,7 +409,6 @@ nav ul li a.active::after {
     flex-wrap: wrap;
 }
 
-/* Plan Styles */
 .plan {
     background-color: #ffffff;
     padding: 20px;
@@ -517,7 +561,7 @@ p {
 
 .get-started {
     background-color: transparent;
-    color: #0f014b; /* Color blanco para el texto */
+    color: #2817bb; /* Color blanco para el texto */
     padding: 12px 24px; /* Ajuste de espacio interno */
     border: none; /* Sin borde */
     border-radius: 5px; /* Bordes redondeados */
