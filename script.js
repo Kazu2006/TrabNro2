@@ -14,6 +14,26 @@ function removeActiveClasses() {
 
 //
 
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    mobileMenu.addEventListener('click', function() {
+        navList.classList.toggle('show');
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Opcional: Para cerrar el menú cuando se hace clic en un enlace de la lista
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            navList.classList.remove('show');
+            mobileMenu.classList.remove('active');
+        });
+    });
+});
+
+
+
 // Añadimos la clase 'active' al enlace que coincide con la página actual
 navLinks.forEach(link => {
     // Comprobamos si el href del enlace coincide con la página actual
