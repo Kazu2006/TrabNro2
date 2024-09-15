@@ -493,6 +493,22 @@ nav ul li a.active::after {
 
 
 /*deploy */
+/* Estilos para las etiquetas verdes */
+.label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.green-label {
+    background-color: #e7f9ee;
+    color: #24c47e;
+}
+
+
 .deployment {
     padding: 50px;
     background-color: #ffffff;
@@ -500,17 +516,19 @@ nav ul li a.active::after {
 }
 
 .deployment img {
-    width: 500px;
+    width: 100%; /* Ajusta la imagen al tamaño de su contenedor */
+    max-width: 500px;
     margin-bottom: 20px;
 }
 
 .deployment-content{
-    max-width: 900px;
+    max-width: 1125px; /* Aumentar el ancho máximo para mayor flexibilidad */
     margin: 0 auto;
     display: flex;
     flex-direction: row-reverse; /*Se cambio a row-reverse para que la imagen esté a la derecha */
     align-items: center; 
     gap: 50px; /*Espacio entre la imagen y el texto */
+    flex-wrap: wrap; /* Para que en pantallas más pequeñas los elementos se apilen verticalmente */
 }
 
 .text-container {
@@ -526,12 +544,13 @@ nav ul li a.active::after {
 
 
 .deployment-contents{
-    max-width: 900px;
+    max-width: 1125px; /* Aumentar el ancho máximo para mayor flexibilidad */
     margin: 0 auto;
     display: flex;
     flex-direction: row; /*Se cambio a row-reverse para que la imagen esté a la izquierda */
     align-items: center; 
     gap: 50px; /*Espacio entre la imagen y el texto */
+    flex-wrap: wrap; /* Para que en pantallas más pequeñas los elementos se apilen verticalmente */
 }
 
 
@@ -635,7 +654,7 @@ p {
 
 .powering {
     background-color: #1c2541;
-    padding: 60px;
+    padding: 70px;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     max-width: 700px;
@@ -668,53 +687,46 @@ p {
     font-size: 16px;
     margin: 30px 0;
     color: rgba(255, 255, 255, 0.7);
+
+
 }
 
 /* CTA button styling */
 .powering .cta-button {
-    background-color: #14ffec;
+    background-color: #0ed89b;
     color: #1c2541;
     font-size: 16px;
-    padding: 12px 25px;
-    border-radius: 50px;
+    padding: 12px 30px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease;
     display: block; /* Ocupa todo el ancho del contenedor */
     margin: 20px auto; /* Margen superior e inferior, centra horizontalmente */
-    width: 150px; /* Ajusta el ancho del botón */
-    height: 15px; /* Ajusta la altura del botón */
+    width: 160px; /* Ajusta el ancho del botón */
+    height: 25px; /* Ajusta la altura del botón */
 }
 
 .powering .cta-button:hover {
-    background-color: #00e6d2;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
-.powering .cta-button {
-    /* ... (estilo del botón) ... */
-    animation: float 2s infinite; /* Animación "float" con duración de 2 segundos, repite infinitamente */
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0); /* Posición inicial */
-    }
-    50% {
-        transform: translateY(-5px); /* Desplaza ligeramente hacia arriba */
-    }
-    100% {
-        transform: translateY(0); /* Vuelve a la posición inicial */
-    }
-}
+    
 
 
-
+/* Estilos generales del footer */
 footer {
     background-color: #0d112b;
     padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Arial', sans-serif;
 }
 
 .footer-content {
@@ -726,15 +738,17 @@ footer {
     gap: 40px;
 }
 
-.footer-section {
-    flex: 1 1 200px;
-    max-width: 300px;
+/* Estilos para la sección del logo */
+.footer-section.footer-logo-text {
+    flex: 1 1 300px;
+    color: #fff;
 }
 
 .footer-logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 15px;
 }
 
 .footer-logo img {
@@ -745,32 +759,51 @@ footer {
 .footer-logo span {
     font-size: 36px;
     font-weight: 700;
-    color: #00b0ff;
+    color: #cfd4d6;
 }
 
-.footer-text {
-    color: #fff;
+.footer-section.footer-logo-text p {
     font-size: 14px;
     line-height: 1.6;
-    text-align: left;
+    margin: 15px 0;
 }
 
-.footer-newsletter {
+/* Redes sociales */
+.footer-section.footer-logo-text .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-section.footer-logo-text .social-icons a {
     color: #fff;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Estilos para la sección de newsletter */
+.footer-section.footer-newsletter {
+    flex: 1 1 250px;
+    color: #fff;
 }
 
 .newsletter-title {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #00b0ff;
+    font-size: 18px;
+}
+
+.footer-newsletter p {
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .foot-btn {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
+    align-items: center;
 }
 
 .foot-btn input {
@@ -780,6 +813,7 @@ footer {
     padding: 10px;
     border-radius: 5px;
     flex-grow: 1;
+    font-size: 14px;
 }
 
 .fo-btn {
@@ -790,16 +824,20 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    font-size: 14px;
 }
 
 .fo-btn:hover {
     background-color: #00a0e9;
 }
 
+/* Estilos para las listas de enlaces */
 .footer-links {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    margin-top: 20px;
+    flex: 1 1 450px;
 }
 
 .internal-pages, .partners {
@@ -808,8 +846,9 @@ footer {
 
 .internal-pages p, .partners p {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #00b0ff;
+    font-size: 18px;
 }
 
 footer ul {
@@ -830,17 +869,17 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
+/* Estilos para la parte inferior del footer */
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
-    color: #fff;
+    color: #777;
     font-size: 12px;
-    border-top: 1px solid #777;
+    border-top: 1px solid #444;
     padding-top: 20px;
     width: 100%;
     max-width: 1200px;
 }
-
 
 
 /* Estilos existentes... */
