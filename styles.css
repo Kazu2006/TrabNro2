@@ -156,18 +156,19 @@ nav ul li a.active::after {
     transition: 0.4s;
 }
 
-/**/
-/* Ajustes en la sección de héroe para mejorar la disposición */
+
+/* Sección de héroe ajustada */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     padding: 100px 50px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1200px; /* Asegura que la sección no ocupe más de 1200px */
 }
 
+/* Estilo del contenido */
 .hero-content {
     flex: 1;
     min-width: 300px;
@@ -186,52 +187,74 @@ nav ul li a.active::after {
     max-width: 600px;
 }
 
+/* Contenedor de los botones */
 .hero-btns {
-    margin-top: 30px;
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 500px; /* Para ajustar el tamaño total */
 }
 
+/* Input de búsqueda */
 .hero-btns input[type="text"] {
-    padding: 12px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 5px 0 0 5px;
     border: none;
     font-size: 16px;
-    width: 200px;
+    width: 250px; /* Ajuste de ancho */
+    background-color: #1e2447;
+    color: #c4c4c4;
+    outline: none; /* Elimina los bordes que aparecen al seleccionar */
 }
 
+/* Estilo del select */
 .hero-btns select {
-    padding: 12px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 0;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
+    background-color: #1e2447;
+    color: #c4c4c4;
+    border-left: 1px solid #2c334e;
+    width: 90px; /* Ajuste de ancho */
+    outline: none; /* Elimina los bordes que aparecen al seleccionar */
 }
 
+/* Botón de acción */
 .hero-btns .btn {
-    background-color: #23d6da;
+    background-color: #00e18e;
     border: none;
-    padding: 12px 30px;
-    border-radius: 5px;
-    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 14px 30px;
+    border-radius: 0 5px 5px 0;
+    color: #2c334e;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agregar transición para color */
+    width: 140px; /* Ajuste del ancho */
+    text-align: center;
 }
 
+/* Botón al pasar el ratón */
 .hero-btns .btn:hover {
-    background-color: #1bb2b3;
+    background-color: #00d179;
+    color: #ffffff; /* Efecto de texto iluminado al pasar el ratón */
 }
 
-/* Estilo de la imagen */
+/* Imagen del héroe */
 .hero-image {
     flex: 1;
     position: relative;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .hero-image img {
-    max-width: 600px;
-    margin-left: 10px;
+    max-width: 550px;
+    margin-left: 50px; /* Aumentamos el margen para separarla del contenido */
 }
 
 
@@ -801,35 +824,48 @@ footer {
 
 .foot-btn {
     display: flex;
-    gap: 10px;
+    gap: 0; /* Quitar espacio entre el input y el botón */
     margin-top: 20px;
     align-items: center;
+    max-width: 500px; /* Ajustar el ancho máximo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden; /* Asegurar que los elementos estén contenidos */
 }
 
+/* Input de búsqueda en el pie de página */
 .foot-btn input {
     border: none;
-    background-color: #272d55;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #1e2447; /* Mismo color que en el hero */
+    color: #c4c4c4; /* Color del texto similar */
+    padding: 15px;
+    border-radius: 5px 0 0 5px;
     flex-grow: 1;
-    font-size: 14px;
+    font-size: 16px;
+    outline: none; /* Elimina el borde en foco */
 }
 
+/* Botón de suscripción */
 .fo-btn {
-    padding: 10px 20px;
-    background-color: #00b0ff;
-    color: #fff;
+    padding: 14px 30px;
+    background-color: #00e18e; /* Mismo color de botón */
+    color: #2c334e;
     border: none;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0; /* Bordes redondeados a la derecha */
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
 }
 
+/* Efecto hover para el botón */
 .fo-btn:hover {
-    background-color: #00a0e9;
+    background-color: #00d179; /* Color más oscuro al pasar el ratón */
+    color: #ffffff; /* Texto iluminado en blanco */
 }
+
+
 
 /* Estilos para las listas de enlaces */
 .footer-links {
@@ -882,9 +918,9 @@ footer ul li a:hover {
 }
 
 
-/* Estilos existentes... */
 
-/* Media queries para responsividad */
+
+
 @media screen and (max-width: 1200px) {
     .container {
         padding: 0 20px;
@@ -951,7 +987,10 @@ footer ul li a:hover {
         gap: 20px;
     }
 
+    /* Ajustes en la disposición de la sección hero */
     .hero {
+        flex-direction: column;
+        text-align: center;
         padding: 40px 15px;
         margin: 15px 0;
     }
@@ -959,6 +998,22 @@ footer ul li a:hover {
     .hero-content h1 {
         font-size: 42px;
         margin-bottom: 12px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-btns {
+        justify-content: center; /* Centra los botones */
+    }
+
+    .hero-btns input[type="text"],
+    .hero-btns select,
+    .hero-btns .btn {
+        width: 100%; /* Asegura que los botones ocupen todo el ancho en móviles */
+        margin-bottom: 10px; /* Añade espacio entre los elementos */
     }
 
     .hero-image img {
@@ -972,23 +1027,35 @@ footer ul li a:hover {
     .service {
         flex-basis: calc(50% - 20px);
     }
+    
+    /* Ajustes adicionales en la disposición de otras secciones */
+    .customer-services, .pricing, .deployment, .reviews, .powering-section, .footer-content {
+        padding: 20px;
+        margin: 15px;
+    }    
+    .service img, .plan img, .deployment img {
+        margin-top: 30px;
+        max-width: 90%;
+    }
+
+    .footer-links, .footer-logo {
+        text-align: center;
+    }
 }
 
 
+/* Tablets y dispositivos medianos */
 @media screen and (max-width: 768px) {
-
-    .container {
+    section, nav, header,.container {
         padding: 0 10px;
+        margin: 0 15px; /* Margen reducido para pantallas más pequeñas */
     }
+
     .hero {
         padding: 30px 10px;
         margin: 10px 0;
     }
 
-    .nav-list {
-        padding: 10px;
-    }
-    
     .hero-content h1 {
         font-size: 36px;
         margin-bottom: 10px;
@@ -1003,8 +1070,25 @@ footer ul li a:hover {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        max-width: 100%; /* Asegurar que ocupe el ancho completo */
     }
-    
+
+    .hero-btns input[type="text"],
+    .hero-btns select,
+    .hero-btns .btn {
+        width: 100%; /* Asegurar que los elementos ocupen todo el ancho */
+    }
+
+    .hero-btns .btn {
+        text-align: center;
+        padding: 12px 20px; /* Ajustamos el padding del botón */
+    }
+
+    .nav-list {
+        padding: 10px;
+    }
+
+
     .service {
         flex-basis: 100%;
         margin-bottom: 20px;
@@ -1035,9 +1119,8 @@ footer ul li a:hover {
         padding: 40px 20px;
     }
 
-
     .service img {
-        width: 200px; /* Reduce the image size for smaller screens */
+        width: 200px; /* Tamaño reducido de las imágenes */
         margin-bottom: 15px;
     }
 
@@ -1047,9 +1130,12 @@ footer ul li a:hover {
     }
 }
 
+
+/* Teléfonos móviles y pantallas pequeñas */
 @media screen and (max-width: 576px) {
-    .container {
+    section, nav, header,.container {
         padding: 0 5px;
+        margin: 0 10px; /* Espacio aún más reducido para móviles */
     }
 
     .hero {
@@ -1058,23 +1144,51 @@ footer ul li a:hover {
     }
 
     .hero-content h1 {
-        font-size: 32px;
+        font-size: 28px; /* Reducir el tamaño del título */
         margin-bottom: 8px;
+        text-align: center; /* Centrar texto en móviles */
     }
 
     .hero-btns {
         flex-direction: column;
         gap: 5px;
+        box-shadow: none; /* Eliminar la sombra en móviles */
+        max-width: 100%; /* Que ocupe todo el ancho del dispositivo */
     }
 
+    .hero-btns input[type="text"],
+    .hero-btns select,
+    .hero-btns .btn {
+        width: 100%; /* Asegurar que los elementos ocupen todo el ancho */
+        border-radius: 5px; /* Bordes redondeados */
+    }
+
+    .hero-btns input[type="text"] {
+        padding: 12px; /* Ajustar padding para móviles */
+    }
+
+    .hero-btns select {
+        padding: 12px; /* Ajustar padding para móviles */
+    }
+
+    .hero-btns .btn {
+        padding: 12px 15px; /* Reducir el padding del botón */
+        text-align: center;
+        font-size: 16px; /* Ajustar tamaño de la fuente */
+    }
+
+
     .service img {
-        width: 150px;
+        width: 250px;
     }
 
     .deployment-content,
     .deployment-contents {
         flex-direction: column;
         text-align: center;
+    }
+    .deployment img{
+        display: none;   
     }
 
     .text-container, .text-containers {
