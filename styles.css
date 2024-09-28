@@ -742,10 +742,11 @@ p {
     
 
 
+
 /* Estilos generales del footer */
 footer {
     background-color: #0d112b;
-    padding: 60px 20px;
+    padding: 80px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -759,7 +760,9 @@ footer {
     width: 100%;
     max-width: 1200px;
     gap: 40px;
+    margin: auto; /* Centrar el contenido */
 }
+
 
 /* Estilos para la sección del logo */
 .footer-section.footer-logo-text {
@@ -793,7 +796,7 @@ footer {
 
 /* Redes sociales */
 .footer-section.footer-logo-text .social-icons {
-    display: flex;
+    display: flow-root;
     gap: 15px;
     margin-bottom: 15px;
 }
@@ -869,7 +872,7 @@ footer {
 
 /* Estilos para las listas de enlaces */
 .footer-links {
-    display: flex;
+    display: flow-root;
     justify-content: space-between;
     gap: 40px;
     margin-top: 20px;
@@ -893,22 +896,41 @@ footer ul {
     margin: 0;
 }
 
+
 footer ul li a {
-    color: #777;
+    color: #cfd4d6; /* Cambia el color del texto */
     text-decoration: none;
     font-size: 14px;
-    transition: color 0.2s ease;
+    cursor: default; /* Elimina el puntero de mano */
 }
 
 footer ul li a:hover {
-    color: #00b0ff;
-    text-decoration: underline;
+    color: #cfd4d6; /* Mantener el mismo color en hover */
+    text-decoration: none; /* Sin subrayado */
+}
+
+
+/* Estilo para quitar la apariencia de botones */
+.internal-pages p, .partners p {
+    color: #00b0ff; /* Mantener el color azul en los títulos */
+    font-size: 18px;
+    font-weight: 600; /* Ajuste del grosor */
+}
+
+.footer-links {
+    display: flex; /* Cambiar a flex para mejor control */
+    justify-content: space-between;
+}
+
+.internal-pages, .partners {
+    flex: 1;
+    padding: 0 50px; /* Ajustar el espaciado */
 }
 
 /* Estilos para la parte inferior del footer */
 .footer-bottom {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 80px;
     color: #777;
     font-size: 12px;
     border-top: 1px solid #444;
