@@ -169,22 +169,20 @@ nav ul li a.active::after {
 }
 
 /* Estilo del contenido */
-.hero-content {
-    flex: 1;
-    min-width: 300px;
-}
 
 .hero-content h1 {
     font-size: 56px;
     font-weight: 600;
     color: #fff;
+    line-height: 1.5;
 }
 
 .hero-content p {
     margin-top: 20px;
-    font-size: 18px;
-    color: #bbb;
+    font-size: 17px;
+    color: #cabfbf;
     max-width: 600px;
+    line-height: 1.5;
 }
 
 /* Contenedor de los botones */
@@ -192,7 +190,6 @@ nav ul li a.active::after {
     display: flex;
     align-items: center;
     gap: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: hidden;
     max-width: 500px; /* Para ajustar el tamaño total */
@@ -221,6 +218,7 @@ nav ul li a.active::after {
     border-left: 1px solid #2c334e;
     width: 90px; /* Ajuste de ancho */
     outline: none; /* Elimina los bordes que aparecen al seleccionar */
+    display: flex;
 }
 
 /* Botón de acción */
@@ -317,9 +315,9 @@ nav ul li a.active::after {
 }
 
 .service img {
-    width: 250px;
+    width: 170px;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .service h3 {
@@ -329,8 +327,8 @@ nav ul li a.active::after {
 }
 
 .service p {
-    font-size: 16px;
-    color: #dddbfa;
+    font-size: 15px;
+    color: #e5e4f7;
     margin-bottom: 20px;
 }
 
@@ -387,22 +385,6 @@ nav ul li a.active::after {
 
 /***********************/
 /* Pricing Section */
-
-.label-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.label {
-    background-color: #12414b; /* Color de fondo para que coincida con la imagen */
-    color: #00ffe7; /* Color del texto turquesa */
-    padding: 8px 16px;
-    border-radius: 25px; /* Mayor curvatura para que coincida mejor */
-    font-size: 14px;
-    font-weight: bold;
-}
-
 .pricing {
     padding: 50px 20px;
     background: linear-gradient(to bottom, #10102c 50%, #ffffff 50%);
@@ -516,19 +498,16 @@ nav ul li a.active::after {
 
 
 /*deploy */
-/* Estilos para las etiquetas verdes */
-.label {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 50px;
-    margin-bottom: 10px;
-}
+/* Estilos para las etiquetas verdes parte blanca */
+
 
 .green-label {
-    background-color: #e7f9ee;
-    color: #24c47e;
+    background-color: #ddf7eb;
+    color: #000000;
+    padding: 8px 16px;
+    border-radius: 25px; /* Mayor curvatura para que coincida mejor */
+    font-size: 14px;
+    font-weight: bold;
 }
 
 
@@ -676,7 +655,7 @@ p {
 }
 
 .powering {
-    background-color: #1c2541;
+    background-color: #10102c;
     padding: 70px;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -745,7 +724,7 @@ p {
 
 /* Estilos generales del footer */
 footer {
-    background-color: #0d112b;
+    background-color: #10102c;
     padding: 80px 20px;
     display: flex;
     flex-direction: column;
@@ -789,10 +768,15 @@ footer {
 }
 
 .footer-section.footer-logo-text p {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.8;
     margin: 15px 0;
 }
+/* Cambiar color de los textos Lorem a blanco */
+.lorem-text {
+    color: #ece4e4;
+}
+
 
 /* Redes sociales */
 .footer-section.footer-logo-text .social-icons {
@@ -822,7 +806,7 @@ footer {
 
 .footer-newsletter p {
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .foot-btn {
@@ -879,8 +863,10 @@ footer {
     flex: 1 1 450px;
 }
 
+/*texto*/
 .internal-pages, .partners {
-    color: #fff;
+    color: #e7e6e6;
+    line-height: 1.5;
 }
 
 .internal-pages p, .partners p {
@@ -888,6 +874,7 @@ footer {
     margin-bottom: 15px;
     color: #00b0ff;
     font-size: 18px;
+    line-height: 1.8;
 }
 
 footer ul {
@@ -898,24 +885,17 @@ footer ul {
 
 
 footer ul li a {
-    color: #cfd4d6; /* Cambia el color del texto */
+    color: #ffffff; /* Cambia el color del texto */
     text-decoration: none;
     font-size: 14px;
     cursor: default; /* Elimina el puntero de mano */
 }
 
 footer ul li a:hover {
-    color: #cfd4d6; /* Mantener el mismo color en hover */
     text-decoration: none; /* Sin subrayado */
 }
 
 
-/* Estilo para quitar la apariencia de botones */
-.internal-pages p, .partners p {
-    color: #00b0ff; /* Mantener el color azul en los títulos */
-    font-size: 18px;
-    font-weight: 600; /* Ajuste del grosor */
-}
 
 .footer-links {
     display: flex; /* Cambiar a flex para mejor control */
@@ -931,12 +911,17 @@ footer ul li a:hover {
 .footer-bottom {
     text-align: center;
     margin-top: 80px;
-    color: #777;
+    color: #bbb;
     font-size: 12px;
     border-top: 1px solid #444;
     padding-top: 20px;
     width: 100%;
     max-width: 1200px;
+}
+
+.footer-bottom p {
+
+    color: #bbb;
 }
 
 
@@ -1155,7 +1140,12 @@ footer ul li a:hover {
 
 /* Teléfonos móviles y pantallas pequeñas */
 @media screen and (max-width: 576px) {
-    section, nav, header,.container {
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+
+    .section, nav, header,.container {
         padding: 0 5px;
         margin: 0 10px; /* Espacio aún más reducido para móviles */
     }
@@ -1199,9 +1189,10 @@ footer ul li a:hover {
         font-size: 16px; /* Ajustar tamaño de la fuente */
     }
 
-
     .service img {
         width: 250px;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .deployment-content,
@@ -1226,15 +1217,25 @@ footer ul li a:hover {
         align-items: center;
     }
 
+    .pricing-plans img{
+        width: 70px;    
+    }
+
     .plan {
         max-width: 90%;
         margin-bottom: 20px;
     }
 
-    footer .footer-content {
+    .footer .footer-content {
         flex-direction: column;
         text-align: center;
     }
+
+    .footer-logo img {
+        width: 50px;
+        height: auto;
+    }
+
 }
 
 
