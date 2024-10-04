@@ -503,7 +503,7 @@ nav ul li a.active::after {
 
 .green-label {
     background-color: #ddf7eb;
-    color: #000000;
+    color: #0c665d; 
     padding: 8px 16px;
     border-radius: 25px; /* Mayor curvatura para que coincida mejor */
     font-size: 14px;
@@ -615,7 +615,7 @@ p {
 
 .reviews img {
     width: 900px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .reviews-content {
@@ -635,7 +635,7 @@ p {
 h2 {
     font-size: 2.5rem; /* Larger heading */
     margin-bottom: 10px;
-    color: #333;
+    color: #1a1818;
 }
 
 p {
@@ -1138,6 +1138,105 @@ footer ul li a:hover {
 }
 
 
+/* Sección de héroe ajustada */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Asegura que la sección no ocupe más de 1200px */
+}
+
+/* Estilo del contenido */
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.hero-content p {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #cabfbf;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Contenedor de los botones */
+.hero-btns {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 500px; /* Para ajustar el tamaño total */
+}
+
+/* Input de búsqueda */
+.hero-btns input[type="text"] {
+    padding: 15px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    font-size: 16px;
+    width: 250px; /* Ajuste de ancho */
+    background-color: #1e2447;
+    color: #c4c4c4;
+    outline: none; /* Elimina los bordes que aparecen al seleccionar */
+}
+
+/* Estilo del select */
+.hero-btns select {
+    padding: 15px;
+    border-radius: 0;
+    border: none;
+    font-size: 14px;
+    background-color: #1e2447;
+    color: #c4c4c4;
+    border-left: 1px solid #2c334e;
+    width: 90px; /* Ajuste de ancho */
+    outline: none; /* Elimina los bordes que aparecen al seleccionar */
+    display: flex;
+}
+
+/* Botón de acción */
+.hero-btns .btn {
+    background-color: #00e18e;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 14px 30px;
+    border-radius: 0 5px 5px 0;
+    color: #2c334e;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agregar transición para color */
+    width: 140px; /* Ajuste del ancho */
+    text-align: center;
+}
+
+/* Botón al pasar el ratón */
+.hero-btns .btn:hover {
+    background-color: #00d179;
+    color: #ffffff; /* Efecto de texto iluminado al pasar el ratón */
+}
+
+/* Imagen del héroe */
+.hero-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 550px;
+    margin-left: 50px; /* Aumentamos el margen para separarla del contenido */
+}
+
+
+
 /* Teléfonos móviles y pantallas pequeñas */
 @media screen and (max-width: 576px) {
     .logo img {
@@ -1161,32 +1260,44 @@ footer ul li a:hover {
         text-align: center; /* Centrar texto en móviles */
     }
 
+    /* Contenedor de la barra de búsqueda */
     .hero-btns {
-        flex-direction: column;
-        gap: 5px;
-        box-shadow: none; /* Eliminar la sombra en móviles */
-        max-width: 100%; /* Que ocupe todo el ancho del dispositivo */
+        display: flex;
+        flex-direction: row; /* Coloca los elementos en fila */
+        align-items: center; /* Centra verticalmente */
+        justify-content: center; /* Centra horizontalmente */
+        gap: 0px; /* Elimina el espacio entre los elementos */
     }
 
     .hero-btns input[type="text"],
     .hero-btns select,
     .hero-btns .btn {
-        width: 100%; /* Asegurar que los elementos ocupen todo el ancho */
+        flex: 1 1 auto; /* Para que se mantenga el ancho de los elementos en una fila */
         border-radius: 5px; /* Bordes redondeados */
+        width: auto; /* Permitir que se ajusten los elementos a su contenido */
+        margin: 5px 0; /* Espacio entre los elementos */
     }
 
+    /* Campo de texto para el dominio */
     .hero-btns input[type="text"] {
-        padding: 12px; /* Ajustar padding para móviles */
+        width: 55%; /* Ajustar el ancho */
+        margin: 0; /* Eliminar márgenes */
+        border-radius: 2px; /* Quitar bordes redondeados para que encajen */
     }
 
+    /* Selector de dominio (.com, .net, etc.) */
     .hero-btns select {
-        padding: 12px; /* Ajustar padding para móviles */
+        width: 27%; /* Ajustar el ancho */
+        margin: 0; /* Eliminar márgenes */
+        border-radius: 0px; /* Quitar bordes redondeados para que encajen */
     }
 
+    /* Botón "Start Free" */
     .hero-btns .btn {
-        padding: 12px 15px; /* Reducir el padding del botón */
-        text-align: center;
-        font-size: 16px; /* Ajustar tamaño de la fuente */
+        width: 30%; /* Ajustar el ancho */
+        margin: 0; /* Eliminar márgenes */
+        padding: 13px; /* Ajuste del padding */
+        border-radius: 0px; /* Quitar bordes redondeados */
     }
 
     .service img {
@@ -1200,6 +1311,7 @@ footer ul li a:hover {
         flex-direction: column;
         text-align: center;
     }
+
     .deployment img{
         display: none;   
     }
@@ -1217,7 +1329,7 @@ footer ul li a:hover {
         align-items: center;
     }
 
-    .pricing-plans img{
+    .pricing-plans img {
         width: 70px;    
     }
 
@@ -1235,7 +1347,5 @@ footer ul li a:hover {
         width: 50px;
         height: auto;
     }
-
 }
-
 
