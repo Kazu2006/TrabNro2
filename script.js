@@ -63,5 +63,31 @@ navLinks.forEach(link => {
 });
 
 
+// Agregar funcionalidad para mostrar la tarjeta de información al hacer clic en los círculos
+document.querySelectorAll('.circle').forEach(circle => {
+    circle.addEventListener('click', function() {
+        const infoBox = document.getElementById('info-box');
+        const infoText = document.getElementById('info-text');
+        const infoImage = document.getElementById('info-image');
+        const country = this.getAttribute('data-country');
+
+        // Actualiza el texto de la tarjeta según el país
+        infoText.textContent = `This is a review from ${country}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`;
+
+        // Puedes cambiar la imagen aquí si tienes diferentes fotos por país
+        // Ejemplo: infoImage.src = `images/${country.toLowerCase()}-client.png`;
+
+        // Mostrar la tarjeta de información
+        infoBox.classList.add('show');
+    });
+});
+
+// Cerrar el cuadro de información cuando se hace clic fuera de él
+document.addEventListener('click', function(e) {
+    const infoBox = document.getElementById('info-box');
+    if (!e.target.closest('.circle') && !e.target.closest('#info-box')) {
+        infoBox.classList.remove('show');
+    }
+});
 
 
