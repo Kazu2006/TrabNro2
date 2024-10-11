@@ -605,8 +605,8 @@ p {
 }
 
 
-
 /**/
+/* Estilos generales */
 .reviews {
     padding: 50px;
     background-color: #ffffff;
@@ -615,11 +615,11 @@ p {
 
 .reviews img {
     width: 900px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .reviews-content {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -628,19 +628,94 @@ p {
 
 .text {
     text-align: center;
-    margin-bottom: 20px; /* Adjust spacing as needed */
+    margin-bottom: 20px;
     color: #000000;
 }
 
 h2 {
-    font-size: 2.5rem; /* Larger heading */
+    font-size: 2.5rem;
     margin-bottom: 10px;
     color: #1a1818;
 }
 
 p {
-    line-height: 1.6; /* Better readability */
-    color: #555; /* Slightly lighter text color */
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Contenedor del mapa */
+.map-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos para los círculos verdes */
+.circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    cursor: pointer;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilo para los nombres de los países */
+.label-pais {
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+/* Estilos para la tarjeta de información */
+.info-box {
+    position: absolute;
+    top: 36%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: none; /* Oculto por defecto */
+    text-align: center;
+    width: 300px;
+}
+
+.info-text {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Animaciones */
+.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 
@@ -926,6 +1001,12 @@ footer ul li a:hover {
 
 
 
+html, body {
+    overflow-x: hidden; /* Evitar scroll horizontal */
+    margin: 0;
+    padding: 0;
+}
+
 
 
 @media screen and (max-width: 1200px) {
@@ -1138,103 +1219,6 @@ footer ul li a:hover {
 }
 
 
-/* Sección de héroe ajustada */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px 50px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px; /* Asegura que la sección no ocupe más de 1200px */
-}
-
-/* Estilo del contenido */
-.hero-content h1 {
-    font-size: 56px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.5;
-}
-
-.hero-content p {
-    margin-top: 20px;
-    font-size: 17px;
-    color: #cabfbf;
-    max-width: 600px;
-    line-height: 1.5;
-}
-
-/* Contenedor de los botones */
-.hero-btns {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    border-radius: 5px;
-    overflow: hidden;
-    max-width: 500px; /* Para ajustar el tamaño total */
-}
-
-/* Input de búsqueda */
-.hero-btns input[type="text"] {
-    padding: 15px;
-    border-radius: 5px 0 0 5px;
-    border: none;
-    font-size: 16px;
-    width: 250px; /* Ajuste de ancho */
-    background-color: #1e2447;
-    color: #c4c4c4;
-    outline: none; /* Elimina los bordes que aparecen al seleccionar */
-}
-
-/* Estilo del select */
-.hero-btns select {
-    padding: 15px;
-    border-radius: 0;
-    border: none;
-    font-size: 14px;
-    background-color: #1e2447;
-    color: #c4c4c4;
-    border-left: 1px solid #2c334e;
-    width: 90px; /* Ajuste de ancho */
-    outline: none; /* Elimina los bordes que aparecen al seleccionar */
-    display: flex;
-}
-
-/* Botón de acción */
-.hero-btns .btn {
-    background-color: #00e18e;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    padding: 14px 30px;
-    border-radius: 0 5px 5px 0;
-    color: #2c334e;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Agregar transición para color */
-    width: 140px; /* Ajuste del ancho */
-    text-align: center;
-}
-
-/* Botón al pasar el ratón */
-.hero-btns .btn:hover {
-    background-color: #00d179;
-    color: #ffffff; /* Efecto de texto iluminado al pasar el ratón */
-}
-
-/* Imagen del héroe */
-.hero-image {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.hero-image img {
-    max-width: 550px;
-    margin-left: 50px; /* Aumentamos el margen para separarla del contenido */
-}
-
 
 
 /* Teléfonos móviles y pantallas pequeñas */
@@ -1244,30 +1228,44 @@ footer ul li a:hover {
         height: auto;
     }
 
-    .section, nav, header,.container {
-        padding: 0 5px;
-        margin: 0 10px; /* Espacio aún más reducido para móviles */
+    /* Ajustar márgenes y padding en contenedores */
+    .section, nav, header, .container {
+        padding: 0 10px;
+        margin: 0 auto; /* Centrar el contenido */
+        max-width: 100%; /* Evitar que los elementos sobrepasen el ancho */
     }
 
     .hero {
-        padding: 20px 5px;
+        padding: 20px 10px;
         margin: 5px 0;
+        text-align: center;
     }
 
     .hero-content h1 {
-        font-size: 28px; /* Reducir el tamaño del título */
+        font-size: 30px; /* Reducir el tamaño del título */
         margin-bottom: 8px;
         text-align: center; /* Centrar texto en móviles */
     }
 
+    .hero-content p {
+        margin-top: 20px;
+        font-size: 17px;
+        max-width: 100%;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+
     /* Contenedor de la barra de búsqueda */
     .hero-btns {
+        margin-top: 30px;
         display: flex;
         flex-direction: row; /* Coloca los elementos en fila */
         align-items: center; /* Centra verticalmente */
         justify-content: center; /* Centra horizontalmente */
         gap: 0px; /* Elimina el espacio entre los elementos */
     }
+
 
     .hero-btns input[type="text"],
     .hero-btns select,
@@ -1277,6 +1275,7 @@ footer ul li a:hover {
         width: auto; /* Permitir que se ajusten los elementos a su contenido */
         margin: 5px 0; /* Espacio entre los elementos */
     }
+
 
     /* Campo de texto para el dominio */
     .hero-btns input[type="text"] {
@@ -1300,10 +1299,21 @@ footer ul li a:hover {
         border-radius: 0px; /* Quitar bordes redondeados */
     }
 
+
+
+
     .service img {
         width: 250px;
         height: auto;
         margin-bottom: 10px;
+    }
+
+    .services p{
+        margin-top: 20px;
+        font-size: 17px;
+        max-width: 100%;
+        line-height: 1.5;
+        text-align: center;   
     }
 
     .deployment-content,
@@ -1312,16 +1322,36 @@ footer ul li a:hover {
         text-align: center;
     }
 
+    .pricing .price{
+        text-align: center;    
+    }
+
     .deployment img{
         display: none;   
     }
 
+    .text-container h2, .text-containers h2 {
+        font-size: 2.1rem;
+        max-width: 100%;
+        line-height: 1.5;
+        text-align: center;  
+    }
+
     .text-container, .text-containers {
-        text-align: center;
+        font-size: 1.1rem;
+        max-width: 100%;
+        line-height: 1.5;
+        text-align: left;  
     }
 
     .reviews img {
         width: 100%;
+    }
+
+    .pricing h2 {
+        font-size: 2.1rem;
+        line-height: 1.5;
+        text-align: center; 
     }
 
     .pricing-plans {
@@ -1333,9 +1363,21 @@ footer ul li a:hover {
         width: 70px;    
     }
 
+
+    .pricing p {
+        line-height: 1.5;
+        text-align: left; 
+    }
+
     .plan {
         max-width: 90%;
         margin-bottom: 20px;
+    }
+
+    .text p{
+        font-size: 1.1rem;
+        line-height: 1.5;
+        text-align: left;    
     }
 
     .footer .footer-content {
