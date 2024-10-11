@@ -169,17 +169,45 @@
     </section>
     
 
-    <section class="reviews ">
+    <section class="reviews">
         <div class="reviews-content">
             <div class="text">
-                <span class="green-label">Our Clients are so fucking Amazing!</span>
+                <span class="green-label">Our Clients are so Amazing!</span>
                 <h2>Our Best Clients Review</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit explicabo voluptates fugiat, natus ipsam placeat ullam quibusdam accusantium eveniet delectus.</p>
             </div>
-            <img src="images/mapa-removebg-preview.png" loading="lazy" alt="Client Reviews">
+            <div class="map-container">
+                <img src="images/mapa-removebg-preview.png" loading="lazy" alt="Client Reviews">
+    
+                <!-- Puntos en el mapa con nombres de países -->
+                <div class="circle" style="top: 27%; left: 16%" data-country="Canada">
+                    <span class="label-pais">Canada</span>
+                </div>
+                <div class="circle" style="top: 25%; left: 70%" data-country="USA">
+                    <span class="label-pais">USA</span>
+                </div>
+                <div class="circle" style="top: 62%; left: 29%" data-country="Peru">
+                    <span class="label-pais">Peru</span>
+                </div>
+                <div class="circle" style="top: 50%; left: 52%" data-country="India">
+                    <span class="label-pais">India</span>
+                </div>
+                <div class="circle" style="top: 64%; left: 80%" data-country="Australia">
+                    <span class="label-pais">Australia</span>
+                </div>
+                <div class="circle" style="top: 8%; left: 35%" data-country="China">
+                    <span class="label-pais">China</span>
+                </div>
+    
+                <!-- Tarjeta de información que aparece al hacer clic en los círculos -->
+                <div id="info-box" class="info-box">
+                    <p id="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    
     <section class="powering-section">
         <div class="powering">
             <div class="powering-over">
@@ -260,3 +288,4 @@
     
 </body>
 </html>
+
