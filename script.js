@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 // Añadimos la clase 'active' al enlace que coincide con la página actual
 navLinks.forEach(link => {
     // Comprobamos si el href del enlace coincide con la página actual
