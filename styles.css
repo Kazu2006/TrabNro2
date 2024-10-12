@@ -36,7 +36,6 @@ body {
 
 
 
-
 /* Ajustes del header y navbar */
 nav {
     display: flex;
@@ -372,8 +371,6 @@ nav ul li a.active::after {
 .service:hover::after {
     transform: scaleX(1);
 }
-
-
 
 
 /***********************/
@@ -787,7 +784,6 @@ p {
     transition: background-color 0.3s ease;
 }
     
-
 
 
 /* Estilos generales del footer */
