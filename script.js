@@ -88,5 +88,3 @@ document.addEventListener('click', function(e) {
         infoBox.classList.remove('show');
     }
 });
-
-
