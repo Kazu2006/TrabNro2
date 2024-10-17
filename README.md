@@ -15,7 +15,15 @@ Tiene sus redes que son:
 
 -WhatsApp
 
-Aqui puedo Dejar Una Imagen de mi Pagina:
+Aqui puedo Dejar Una Imagen de mi Pagina (maqueta):
 
 
 ![WhatsApp Image 2024-10-17 at 5 30 15 PM](https://github.com/user-attachments/assets/e6e1616f-1ca1-442b-869f-dcdb80311edb)
+
+
+Aqui puedo Dejar una Imagen de la pagina web en lo que esta Inspirado:
+
+
+
+![web2](https://github.com/user-attachments/assets/5109efdc-e980-4df0-a6be-a54166d767aa)
+
