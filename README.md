@@ -18,4 +18,4 @@ Tiene sus redes que son:
 Aqui puedo Dejar Una Imagen de mi Pagina:
 
 
-![aaa](https://github.com/user-attachments/assets/9cb27385-09f2-4b41-99d7-350080b524d3)
+![WhatsApp Image 2024-10-17 at 5 30 15 PM](https://github.com/user-attachments/assets/e6e1616f-1ca1-442b-869f-dcdb80311edb)
