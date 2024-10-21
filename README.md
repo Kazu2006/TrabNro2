@@ -5,15 +5,11 @@ de Paga para todo el mundo.
 
 (Ojo por el momento no funciona aun los controles como dije es un maqueta en lo que estoy trabajando para cualquier dispositivo) 
 
-## Tiene sus redes que son: 
+## Estructura: 
 
--Instragram 
 
--Facebook 
+![image](https://github.com/user-attachments/assets/6271f06b-95c4-47e7-96b5-8bc5993d06c0)
 
--Youtube 
-
--WhatsApp
 
 ## Aqui puedo Dejar Una Imagen de mi Pagina (maqueta):
 
