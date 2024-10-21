@@ -1,4 +1,4 @@
-# Proyecto Web Numero 2
+# Proyecto Web Numero 2 - Front-end
 
 Esto es un Proyecto que estuve trabajando durante 5 o 6 Semanas parte de la practica en la empresa "Digital-Buho", es una maqueta  que esta especializada para ofrecer servicios de Hosting
 de Paga para todo el mundo llamado "Cloudflex", Todo se fue revisando con reuniones por el mismo instructor y se fue dando indicaciones en donde mejorar.  
