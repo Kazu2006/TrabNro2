@@ -1,11 +1,11 @@
 # Proyecto Web Numero 2
 
-Mi pagina web es una maqueta  que esta especializada para ofrecer servicios de Hosting
-de Paga para todo el mundo. 
+Esto es un Proyecto que estuve trabajando durante 5 o 6 Semanas parte de la practica en la empresa "Digital-Buho", es una maqueta  que esta especializada para ofrecer servicios de Hosting
+de Paga para todo el mundo llamado "Cloudflex", Todo se fue revisando con reuniones por el mismo instructor y se fue dando indicaciones en donde mejorar.  
 
-(Ojo por el momento no funciona aun los controles como dije es un maqueta en lo que estoy trabajando para cualquier dispositivo) 
+(por el momento no funciona aun los controles como dije es un maqueta en lo que estoy trabajando para cualquier dispositivo)
 
-## Estructura: 
+## Esto es mi Estructura: 
 
 
 ![image](https://github.com/user-attachments/assets/6271f06b-95c4-47e7-96b5-8bc5993d06c0)
