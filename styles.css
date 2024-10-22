@@ -10,18 +10,14 @@ body {
     max-width: 1200px; /* Ajusta el ancho máximo del contenido */
     margin: 0 auto; /* Centra el contenido horizontalmente */
 }
-
 /* Aplicar estilos al contenido dentro de la clase .container */
 .container > * {
     padding: 20px; /* Ajusta el espacio interno */
 }
-
-
 .logo {
     display: flex;
     align-items: center; /* Aligns the image and text vertically */
 }
-
 .logo img {
     max-width: 40px;
     margin-right: 10px;
@@ -33,8 +29,6 @@ body {
     font-size: 24px; /* Adjust size as needed */
     color: #fff;
 }
-
-
 
 /* Ajustes del header y navbar */
 nav {
@@ -115,11 +109,6 @@ nav ul li a.active::after {
     z-index: 2; /* Asegurar que esté por delante */
 }
 
-
-
-
-
-/*****/
 /* Nuevo estilo para el número de teléfono */
 .phone {
     display: flex;
